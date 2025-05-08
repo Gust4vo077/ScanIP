@@ -31,18 +31,23 @@ Este projeto utiliza as seguintes bibliotecas:
 - **requests**
 - **tk**
 - **urllib3**
+-
+## 🛠 Formato dos Arquivos CSV**
 
-As dependências estão listadas no arquivo `requirements.txt`. Para instalá-las, utilize:
+- O ScanIP foi desenvolvido para ler arquivos CSV exportados diretamente do Wireshark. Um exemplo de formato de arquivo CSV esperado:
+
+| No. | Time      | Source                                | Destination                          | Protocol | Length | Info                                          | ab Time           |
+|-----|-----------|---------------------------------------|--------------------------------------|----------|--------|-----------------------------------------------|-------------------|
+| 1   | 0.000000  | 2804:d20:8156:9600:5108:6f97:5de4:1f86 | 2603:1063:27:1::254                  | TCP      | 74     | 53730 > 443 [FIN, ACK] Seq=1 Ack=1 Win=1023 Len=0 | 15:14:28.372420   |
+| 2   | 0.000467  | 192.168.2.186                         | 204.79.197.203                       | TCP      | 54     | 64632 > 443 [FIN, ACK] Seq=1 Ack=1 Win=1021 Len=0 | 15:14:28.372887   |
+
+- O projeto irá extrair automaticamente os endereços IP de origem e destino e realizar a verificação de segurança, com base nas APIs ou lista local configurada.
+
+
+## As dependências estão listadas no arquivo `requirements.txt`. Para instalá-las, utilize:**
 
 ```bash
 git clone https://github.com/Gust4vo077/ScanIP.git
 cd ScanIP
 pip install -r requirements.txt
-
-## 🛠 **Tecnologias e Dependências**
-
-Como o arquivos deve ser 
-
-
-
 
